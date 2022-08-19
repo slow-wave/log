@@ -3,7 +3,9 @@ title: "[백준] DFS/BFS 구현 문제 1- 1260번 DFS와 BFS"
 date: 2022-08-12T22:29:58+09:00
 draft: false
 category : ["algorithm"]
-tag : ["백준", "DFS", "BFS", "python"]
+tags : ["백준", "DFS", "BFS", "python"]
+showToc: true
+UseHugoToc: true
 ---
 
 - 문제 ([link](https://www.acmicpc.net/problem/1260))

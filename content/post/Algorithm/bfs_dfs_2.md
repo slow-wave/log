@@ -1,9 +1,12 @@
 ---
 title: "[백준] DFS/BFS 구현 문제 2- 2178번 미로탐색"
 date: 2022-08-19T17:11:21+09:00
+aliases: ["/algorithm"]
 draft: false
 category : ["algorithm"]
-tag : ["백준", "DFS", "BFS", "python"]
+tags : ["백준", "DFS", "BFS", "python"]
+showToc: true
+UseHugoToc: true
 ---
 
 - 문제 ([link](https://www.acmicpc.net/problem/2178))
