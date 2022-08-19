@@ -1,12 +1,12 @@
 ---
-title: "DFS/BFS 구현 문제"
+title: "[백준] DFS/BFS 구현 문제 1- 1260번 DFS와 BFS"
 date: 2022-08-12T22:29:58+09:00
 draft: false
+category : ["algorithm"]
+tag : ["백준", "DFS", "BFS", "python"]
 ---
 
-## [백준]  **DFS/BFS 구현 문제 - 1260번 DFS와 BFS**
-
-### 문제 설명([link](https://www.acmicpc.net/problem/1260))
+- 문제 ([link](https://www.acmicpc.net/problem/1260))
 
 기본적인 그래프 탐색 문제 입니다. DFS는 stack을 활용해서 구현하고, BFS는 queue를 활용해 구현합니다. 
 
@@ -15,7 +15,6 @@ draft: false
 ### 풀이 방법
 
 - Graph
-![graph](../img/BFS_DFS_algo_1.png)
 
 ```markdown
 <input>
@@ -28,10 +27,11 @@ draft: false
 ```
 
 위의 testcase로 만들어진 그래프의 모양은 다음과 같습니다.  
+{{< figure src="/images/BFS_DFS_algo_1.png">}}
 
 - DFS 방식으로 그래프 탐색
 
-![DFS](../img/BFS_DFS_algo_2.png)
+{{< figure src="/images/BFS_DFS_algo_2.png">}}
 
 stack 자료구조에서 pop을 하면 나중에 들어온 것이 먼저 나옵니다. 
 
@@ -39,7 +39,7 @@ stack 자료구조에서 pop을 하면 나중에 들어온 것이 먼저 나옵�
 
 - BFS 방식으로 그래프 탐색
 
-![BFS](../img/BFS_DFS_algo_3.png)
+{{< figure src="/images/BFS_DFS_algo_3.png">}}
 
 queue에서 pop을 하면 처음에 들어온 것이 먼저 나갑니다. 
 
