@@ -4,15 +4,16 @@ date: 2022-08-19T17:11:21+09:00
 draft: false
 category: ["algorithm"]
 tags: ["백준", "DFS", "BFS", "python"]
+categories: ["algo-problem"]
 showToc: true
 UseHugoToc: true
 comments: true
 ---
+## [백준] 2178번 미로탐색
+- ([문제 링크](https://www.acmicpc.net/problem/2178))
 
-- 문제 ([link](https://www.acmicpc.net/problem/2178))
-
+## 풀이 방법
 (1,1) ~ (N,M) 까지의 최단 경로를 구하는 문제이므로 BFS를 활용해서 구현합니다. 
-
 이 문제에서 BFS를 활용하여 구현하는 이유는 다음과 같습니다. 
 
 ## Code (python)

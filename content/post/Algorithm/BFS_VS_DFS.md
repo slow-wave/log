@@ -3,6 +3,7 @@ title: "[알고리즘] DFS vs. BFS"
 date: 2022-08-10T21:50:38+09:00
 draft: false
 tags: ["BFS","DFS","Algorithm"]
+categories: ["algorithm"]
 showToc: true
 UseHugoToc: true
 comments: true

@@ -4,16 +4,16 @@ date: 2022-08-23T11:14:32+09:00
 draft: false
 category: ["algorithm"]
 tags: ["백준", "DFS", "BFS", "python"]
+categories: ["algo-problem"]
 showToc: true
 UseHugoToc: true
 comments: true
 ---
-
-- 문제([link](https://www.acmicpc.net/problem/2667))
-
-graph에서 연결 요소(connected component)의 수를 찾고 연결 요소 안의 node 수를 카운트하는 문제입니다. deque로 BFS를 구현해서 해결했습니다. 
+## [백준] 2667번 단지 번호 붙이기
+- ([문제 링크](https://www.acmicpc.net/problem/2667))
 
 ## 풀이 방법
+graph에서 연결 요소(connected component)의 수를 찾고 연결 요소 안의 node 수를 카운트하는 문제입니다. deque로 BFS를 구현해서 해결했습니다. 
 
 [0] graph와 (x,y) 좌표의 방문 여부를 표시하는 visited (list)를 생성합니다. 
 
