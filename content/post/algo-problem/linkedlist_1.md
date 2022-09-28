@@ -1,7 +1,7 @@
 ---
 title: "[Leetcode] Linked List 1 - 21. Merge Two Sorted Lists"
 date: 2022-09-13T00:15:16+09:00
-draft: true
+draft: false
 tags: ["leetcode", "linkedlist", "python"]
 categories: ["algo-problem"]
 showToc: true
@@ -15,7 +15,7 @@ comments: true
 
 이 문제는 제목 그대로 2개의 리스트를 정렬해서 결합하는 문제입니다. 구현되어있는 ListNode class를 이용해서 mergeTwoLists method를 완성하면 됩니다. 
 
-## 풀이 과정s
+## 풀이 과정
 
 다음의 조건을 갖고 있다고 가정하고 실행 과정을 정리해보겠습니다. 
 
