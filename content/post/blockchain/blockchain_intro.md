@@ -11,7 +11,7 @@ comments: true
 
 다음은 블록체인에 대한 기본적인 개념을 이해할 수 있었던 
 
-****[But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4) 영상을 보고 정리한 내용입니다.** 
+[But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4) 영상을 보고 정리한 내용입니다.** 
 
 ## 블록체인을 소유하고 있는건 어떤 의미일까?
 
