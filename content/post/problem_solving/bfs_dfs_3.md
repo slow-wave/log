@@ -4,7 +4,7 @@ date: 2022-08-23T11:14:32+09:00
 draft: false
 category: ["algorithm"]
 tags: ["백준", "DFS", "BFS", "python"]
-categories: ["algo-problem"]
+categories: ["problem_solving"]
 showToc: true
 UseHugoToc: true
 comments: true
