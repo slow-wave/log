@@ -2,7 +2,7 @@
 title: "[blockchain] ch2. How bitcoin works"
 date: 2022-09-29T10:35:18+09:00
 draft: false
-tags: ["blockchain"]
+tags: ["blockchain","bitcoin"]
 categories: ["blockchain"]
 showToc: true
 UseHugoToc: true
@@ -19,7 +19,7 @@ comments: true
 - Consensus : 악의적인 상황이 발생하더라도 네트워크를 올바른 방향으로 이끌고자 하는 다수의 노드들이 상호 검증을 거쳐 올바른 블록 생성을 이끌어내는 프로세스와 알고리즘.
 - PoW(Proof of Work) : 작업 증명. 최초의 consensus 알고리즘. 블록 생성 시간동안 가장 많은 해시파워를 제공한 노드가 블록을 생성하도록 설계.
 
-## 요약
+### Introduction
 
 비트코인은 탈중앙화된 신뢰에 기반하며 비트코인에서 신뢰는 다른 참여자들간의 상호작용으로부터 달성된다. 거래가 비트코인 시스템을 통해 추적하고 분산된 합의(distributed consensus)의 메커니즘에 의해 신뢰되고 받아들여지며 최종적으로 모든 transaction의 ledger인 blockchain에 기록되는 것을 관찰할것이다. 비트코인 시스템은 키를 포함한 지갑을 갖고 있는 users, network를 통해 전파되는 transactions, miners 로 구성된다.
 

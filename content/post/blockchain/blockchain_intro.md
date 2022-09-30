@@ -2,7 +2,7 @@
 title: "[blockchain] blockchain의 개념"
 date: 2022-09-28T16:06:51+09:00
 draft: false
-tags: ["blockchain"]
+tags: ["blockchain","bitcoin"]
 categories: ["blockchain"]
 showToc: true
 UseHugoToc: true
