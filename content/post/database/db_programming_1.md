@@ -1,5 +1,5 @@
 ---
-title: "Lecture1. Re-introduction to DB"
+title: "[database] Re-introduction to DB"
 date: 2022-10-06T00:50:00+09:00
 draft: false
 tags: ["DB"]
