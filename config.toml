@@ -70,7 +70,7 @@ tocopen = false
 
   [params.homeInfoParams]
   Title = "🌊"
-  Content = "공부한 것을 기록하는 블로그입니다. 틀린 부분이 있다면 댓글로 알려주시면 감사하겠습니다."
+  Content = "공부한 것을 기록하는 블로그입니다.🙂 "
 
   [[params.socialIcons]]
   name = "github"

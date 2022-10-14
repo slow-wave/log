@@ -1,8 +1,8 @@
 ---
-title: "[boostcourse 웹프로그래밍 풀스택] 1-1. HTTP 프로토콜의 이해 "
+title: "[boostcourse 웹프로그래밍 풀스택] 1-1. HTTP 프로토콜의 이해"
 date: 2022-09-06T14:41:22+09:00
 draft: false
-tags: ["web","http","boostcourse 웹프로그래밍 풀스택"]
+tags: ["web","HTTP","boostcourse 웹프로그래밍 풀스택"]
 categories: ["fullstack_boostcourse"]
 showToc: true
 UseHugoToc: true
@@ -34,7 +34,7 @@ HTTP 프로토콜로 데이터를 주고 받기 위해서는 Request를 보내�
 
 ### Server-Client 모델
 
-{{< figure src="/images/fullstack_boostcourse/1.png">}}
+{{< figure src="/images/fullstack_boostcourse/web_boostcourse_1/0.png">}}
 
 Server-Client는 1:N 구조로 연결되어 있으며 클라이언트의 요청이 있을 때 서버가 응답하는 단방향 통신입니다. 즉, 한 대의 서버에 다수의 클라이언트가 접속하여 서비스를 이용합니다. 다수의 사용자들이 공동으로 열람·복사·수정·관리하는 데이터를 여러 곳에 분산시키지 않고 단일한 중앙 서버에 저장하여 관리함으로써 데이터의 유일성과 통일성을 보장할 수 있습니다. 
 
