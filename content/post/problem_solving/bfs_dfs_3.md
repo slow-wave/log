@@ -1,93 +1,72 @@
 ---
-title: "[백준] DFS/BFS 3- 2667번 단지 번호 붙이기"
-date: 2022-08-23T11:14:32+09:00
+title: "[programmers] DFS/BFS 4- 순위"
+date: 2022-09-06T14:23:31+09:00
 draft: false
-category: ["algorithm"]
-tags: ["백준", "DFS", "BFS", "python"]
+tags: ["programmers", "DFS", "python"]
 categories: ["problem_solving"]
 showToc: true
 UseHugoToc: true
 comments: true
 ---
-## [백준] 2667번 단지 번호 붙이기
-- ([문제 링크](https://www.acmicpc.net/problem/2667))
+## [programmers] 순위
+- ([문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/49191))
+
+이 문제는 그래프로 분류되어 있습니다. 어떻게 그래프로 접근해야하는지 아이디어가 생각나지 않아서 어려웠던 문제입니다. 구글링을 해봤을 때 플로이드 와샬(Floyd-Warshall) 알고리즘을 이용해서 구현을 하신 답안이 많았지만 DFS로 구현했습니다. 플로이드 와샬의 경우 각 정점에서 다른 모든 정점까지의 최단경로를 구할 수 있는 알고리즘인데 이보다는 DFS가 효율적이라고 생각했습니다. 실제로 플로이드 와샬의 시간 복잡도는 O(n^3)입니다. 
 
 ## 풀이 방법
-graph에서 연결 요소(connected component)의 수를 찾고 연결 요소 안의 node 수를 카운트하는 문제입니다. deque로 BFS를 구현해서 해결했습니다. 
-
-[0] graph와 (x,y) 좌표의 방문 여부를 표시하는 visited (list)를 생성합니다. 
-
-[1] graph 전체를 순회하면서 graph(x,y) 값이 1인 경우에 bfs 함수를 실행합니다. 
-- [1-1] (x,y)를 push한 queue를 생성합니다.
-- [1-2] queue에서 원소를 pop 합니다.
-- [1-3] pop한 원소를 기준값으로 해서 상하좌우를 살핍니다. 
-만약 값이 1이고 아직 방문하지 않았다면 push 하고, 방문 표시합니다.
-*이 과정은 빈 queue가 될 때까지 반복합니다.   
-
-[2] bfs 함수가 실행된 횟수와 bfs 함수 내부에서 queue에 좌표를 push 할 때마다 count한 횟수를 출력합니다.
-
-## Code (python)
 
 ```python
-from collections import deque
+n = 5
+results = [[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]
+```
 
-def bfs(root):
-    #단지 내의 apt 수 저장하는 변수
-    cnt = 1
-    queue = deque([root])
-    #queue에 원소가 있는 동안
-    while queue:
-        #x,y pop
-        x,y = queue.popleft()
-        #(x,y)를 기준으로 상,하,좌,우 확인 
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            #만약 nx,ny가 범위값 밖에 있다면 continue
-            if nx < 0 or ny < 0 or nx >= n or ny >= n:
-                continue
-            #graph(nx,ny)값이 1이고 아직 방문하지 않았다면
-            if graph[nx][ny]==1 and not visited[nx][ny]:
-                #방문 표시
-                visited[nx][ny] = True
-                #stack에 표시
-                queue.append((nx,ny))
-                #apt 수 증가
-                cnt += 1
+results의 정보를 가지고 확실한 순위를 알 수 있는 노드의 수를 찾아내는 문제입니다. 자기 자신을 제외하고 모든 노드에 대해서 승패 여부를 알 수 있을 때만 확실한 순위를 알 수 있습니다. 
 
-    return cnt
+만약 5번 노드가 1~4번 노드에 대해서 패배했다면 순위는 5위가 됩니다. 
+만약 2번 노드가 1,3,4에게 패배하고 5에게 승리했다면 순위는 4위가 됩니다. 
 
-#입력
-n = int(input())
-graph,result = [],[]
+따라서 주어진 정보를 가지고 노드 전체에 대한 승패를 표시하면 답을 구할 수 있습니다. 
 
-for _ in range(n):
-    line = input()
-    graph.append([int(i) for i in line])
+자세한 풀이 과정은 다음과 같습니다. 
+{{< figure src="/images/bfs_dfs_4/1.png">}}
 
-#방문 표시 리스트 생성
-visited = [[False]*n for i in range(n)]
+최종 graph의 형태는 다음과 같습니다.
+{{< figure src="/images/bfs_dfs_4/2.png">}}
 
-#상하좌우 이동을 위한 dx,dy 좌표
-dx = [1, -1, 0, 0]
-dy = [0, 0, -1, 1]
+확실한 순위를 알 수 있는 노드는 2,5번으로 총 2개 입니다. 
+## Code (python)
+```python
+def dfs(graph):
+    #1~N번 노드에 대해서
+    for target in range(1,n+1):
+        #target 노드가 이긴 노드들을 담음
+        stack = [i for i, rst in enumerate(graph[target]) if rst == 1]
+        
+        while stack:
+            lose = stack.pop()
 
-#graph의 모든 좌표에 대해서 확인
-for x in range(n):
-    for y in range(n):
-        #만약 graph(x,y)값이 1이고 아직 방문하지 않았다면
-        if graph[x][y] == 1 and not visited[x][y]:
-            #방문 표시
-            visited[x][y] = True
-            #반환되는 단지 내의 apt 수를 저장
-            apt_n = bfs((x,y))
-            #result 리스트에 더함
-            result.append(apt_n)
+            for i, rst in enumerate(graph[lose]):
+                # a > b and b > c 면 a > c 임으로 이를 표시함.
+                if not graph[target][i] and rst == 1:
+                    graph[target][i], graph[i][target] = 1, -1
+                    stack.append(i)
+    return graph
 
-#오름차순으로 정렬
-result.sort()
-#총 apt 단지 수 출력
-print(len(result))
-#단지 내의 아파트 수 출력        
-print(*result, sep='\n')
+def solution(n,results):
+    answer = 0
+    #승패를 기록하는 graph 생성
+    graph = [[0]*(n+1) for _ in range(n+1)]
+    
+    #승패 기록
+    for win, lose in results:
+        graph[win][lose] = 1
+        graph[lose][win] = -1
+    
+    graph = dfs(graph)
+
+    for i in range(1,n+1):
+        #자기 자신을 제외하고 모든 노드에 승패 표시가 되어있다면
+        if graph[i][1:].count(0) == 1:
+            answer += 1 
+    return answer
 ```
