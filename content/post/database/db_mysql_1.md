@@ -3,7 +3,7 @@ title: "[MySQL] 활용"
 date: 2022-11-01T16:21:10+09:00
 draft: false
 tags: ["DB","MySQL"]
-categories: ["mysql","leetcode"]
+categories: ["mysql","leetcode","SQL"]
 showToc: true
 UseHugoToc: true
 comments: true
