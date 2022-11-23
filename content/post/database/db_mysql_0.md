@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] 함수 정리"
+title: "[MySQL] 문법/함수 정리"
 date: 2022-10-21T01:43:36+09:00
 draft: false
 tags: ["DB","MySQL"]
@@ -11,7 +11,7 @@ comments: true
 
 코딩테스트 연습 할 때 Leetcode 플랫폼을 많이 이용합니다. discussion을 보면 문제에 대한 각자의 코드와 설명이 있는데 많은 사람들이 vote와 댓글 기능을 이용해 피드백을 줍니다. 보통은 칭찬이 많이 달려있는 글을 위주로 참고합니다. 별로인 것에 대해서는 가차없는 피드백이 적혀있다는 것도 도움이 되는 것 같습니다. 또 댓글로 시간복잡도 등에 대해서 토론하는 부분도 있어서 유용합니다. 
 
-개인적으로 SQL을 공부 할 필요성을 느껴서 MySQL 함수 중심으로 problem과 code를 정리해봤습니다. discussion을 꼼꼼히 읽어서 어떻게 코딩하는 것이 좋은 방향인지도 알아보려고 합니다. 
+개인적으로 SQL을 공부 할 필요성을 느껴서 MySQL의 문법을 중심으로 problem과 code를 정리해봤습니다. discussion을 꼼꼼히 읽어서 어떻게 코딩하는 것이 좋은 방향인지도 알아보려고 합니다. 
 
 ### 0) SUBSTRING ([problem](https://leetcode.com/problems/fix-names-in-a-table/?envType=study-plan&id=sql-i))
 
@@ -41,9 +41,9 @@ FROM Users
 ORDER BY user_id;
 ```
 
-- `[SUBSTRING(***str***,***pos***)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring)`
+- [SUBSTRING(***str***,***pos***)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring)
     - pos ~ 위치까지의 문자열 반환
-- `[SUBSTRING(***str***,***pos***,***len***)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring)`
+- [SUBSTRING(***str***,***pos***,***len***)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring)
     - pos ~ len 위치까지의 문자열 반환
 
 ### 1) GROUP_CONCAT ([problem](https://leetcode.com/problems/group-sold-products-by-the-date/))

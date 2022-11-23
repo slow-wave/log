@@ -42,7 +42,7 @@ Kruskal은 **간선 선택**을 기반으로 하는 알고리즘입니다. 이�
 
 - 그림 설명
 
-{{< figure src="/images/algorithm/MST_1/1.png">}}
+{{< figure src="/images/algorithm/algo_MST_1/1.png">}}
 
 ### 2) code
 

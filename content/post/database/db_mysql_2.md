@@ -9,7 +9,7 @@ UseHugoToc: true
 comments: true
 ---
 
-Table간 Join을 수행해야할 때는 다음과 같이 **집합**의 개념을 활용하면 좋습니다. **MySQL** 언어로 아래의 모든 집합 관계에 대해서 표현해보려고 합니다. 
+Table간 Join을 수행해야할 때는 다음과 같이 **집합**의 개념을 활용해서 생각하면 좋습니다. **MySQL** 언어로 아래의 모든 집합 관계에 대해서 표현해보려고 합니다. 
 
 {{< figure src="/images/database/db_mysql_2/0.png">}}
 
