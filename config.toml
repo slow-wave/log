@@ -15,8 +15,8 @@ minifyOutput = true
 
 [params]
 env = "production"
-title = "ExampleSite"
-description = "ExampleSite description"
+title = "slow-wave blog"
+description = "공부한 것을 기록하는 블로그입니다.🙂"
 keywords = [ "Blog", "Portfolio", "PaperMod" ]
 author = "Me"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
@@ -70,7 +70,7 @@ tocopen = false
 
   [params.homeInfoParams]
   Title = "🌊"
-  Content = "공부한 것을 기록하는 블로그입니다.🙂 "
+  Content = "공부한 것을 기록하는 블로그입니다.🙂"
 
   [[params.socialIcons]]
   name = "github"
