@@ -2,7 +2,7 @@
 title: "[algorithm] 소수 판별"
 date: 2022-11-24T01:14:27+09:00
 draft: false
-tags: ["BFS","DFS","Algorithm"]
+tags: ["Algorithm"]
 categories: ["algorithm"]
 showToc: true
 UseHugoToc: true
