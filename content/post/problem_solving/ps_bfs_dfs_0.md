@@ -31,11 +31,11 @@ comments: true
 ```
 
 위의 testcase로 만들어진 그래프의 모양은 다음과 같습니다.  
-{{< figure src="/images/problem_solving/bfs_dfs_0/0.png">}}
+{{< figure src="/images/problem_solving/ps_bfs_dfs_0/0.png">}}
 
 - DFS 방식으로 그래프 탐색
 
-{{< figure src="/images/problem_solving/bfs_dfs_0/1.png">}}
+{{< figure src="/images/problem_solving/ps_bfs_dfs_0/1.png">}}
 
 stack 자료구조에서 pop을 하면 나중에 들어온 것이 먼저 나옵니다. 
 
@@ -43,7 +43,7 @@ stack 자료구조에서 pop을 하면 나중에 들어온 것이 먼저 나옵�
 
 - BFS 방식으로 그래프 탐색
 
-{{< figure src="/images/problem_solving/bfs_dfs_0/2.png">}}
+{{< figure src="/images/problem_solving/ps_bfs_dfs_0/2.png">}}
 
 queue에서 pop을 하면 처음에 들어온 것이 먼저 나갑니다. 
 

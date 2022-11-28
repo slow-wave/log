@@ -3,7 +3,7 @@ title: "[Leetcode] Linked List 1 - 21. Merge Two Sorted Lists"
 date: 2022-09-13T00:15:16+09:00
 draft: false
 tags: ["leetcode", "linkedlist", "python"]
-categories: ["algo-problem"]
+categories: ["problem_solving"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -31,13 +31,9 @@ b = [1,3,4]
 
 dummy = cur = ListNode(0)
 ```
-{{< figure src="/images/linkedlist_1/1.png">}}
-{{< figure src="/images/linkedlist_1/2.png">}}
-{{< figure src="/images/linkedlist_1/3.png">}}
-
-
-
-
+{{< figure src="/images/problem_solving/ps_linkedlist_1/1.png">}}
+{{< figure src="/images/problem_solving/ps_linkedlist_1/2.png">}}
+{{< figure src="/images/problem_solving/ps_linkedlist_1/3.png">}}
 
 ## Code (python)
 
