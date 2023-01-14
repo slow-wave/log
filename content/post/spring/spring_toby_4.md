@@ -96,6 +96,6 @@ comments: true
     - 스프링에서의 방법 - DB 에러 코드 사용
         - SQLException을 코드에서 직접 전환하고 싶다면 SQLExceptionTranslator 인터페이스를 구현한 클래스 중에서 SQLErrorCodeExceptionTranslator 사용하면 됨.
 
-# 참고 자료
+## 참고 자료
 
 - [[book] **토비의 스프링 3.1 Vol 1: 스프링의 이해와 원리, 이일민**](https://product.kyobobook.co.kr/detail/S000000935358)
