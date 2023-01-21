@@ -2,8 +2,8 @@
 title: "[백준] DP 1 - 2579번 계단 오르기"
 date: 2022-12-10T16:54:24+09:00
 draft: false
-tags: ["DP", "python"]
-categories: ["problem_solving"]
+tags: ["백준", "DP", "python"]
+categories: ["Problem Solving"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -11,7 +11,7 @@ comments: true
 
 - 문제([link](https://www.acmicpc.net/problem/2579))
 
-DP로 해결하는 문제입니다. 
+DP로 해결하는 문제입니다.
 
 ## 풀이 방법
 
@@ -32,20 +32,20 @@ dp = [0 for i in range(301)]
 3)마지막 칸 반드시 밟아야 함.
 ```
 
-→ DP는 큰 문제를 작은 문제로 나누어 푸는 문제임. 
+→ DP는 큰 문제를 작은 문제로 나누어 푸는 문제임.
 
-어떤 큰 문제가 있을 때 그것의 가장 작은 문제부터 생각해야함. 
+어떤 큰 문제가 있을 때 그것의 가장 작은 문제부터 생각해야함.
 
-→ 마지막 칸은 반드시 밟아야 하므로 다음과 같은 두 개의 경우의 수 존재함. 
+→ 마지막 칸은 반드시 밟아야 하므로 다음과 같은 두 개의 경우의 수 존재함.
 
 ```markdown
 | END-3 | END-2 | END-1 | END |
 
-- [case 1] (END-3) ➡️  (END-1) ➡️ (END)
+- [case 1] (END-3) ➡️ (END-1) ➡️ (END)
 - [case 2] (END-2) ➡️ (END)
 ```
 
-→ case1 or case2 중 max값 찾기. 
+→ case1 or case2 중 max값 찾기.
 
 ```python
  dp[i] = max(dp[i-3] + arr[i-1] + arr[i], dp[i-2] + arr[i])

@@ -3,26 +3,29 @@ title: "[백준] DFS/BFS 3- 2667번 단지 번호 붙이기"
 date: 2022-08-23T11:14:32+09:00
 draft: false
 category: ["algorithm"]
-tags: ["백준", "DFS", "BFS", "python"]
-categories: ["problem_solving"]
+tags: ["백준", "graph", "python"]
+categories: ["Problem Solving"]
 showToc: true
 UseHugoToc: true
 comments: true
 ---
+
 ## [백준] 2667번 단지 번호 붙이기
+
 - ([문제 링크](https://www.acmicpc.net/problem/2667))
 
 ## 풀이 방법
-graph에서 연결 요소(connected component)의 수를 찾고 연결 요소 안의 node 수를 카운트하는 문제입니다. deque로 BFS를 구현해서 해결했습니다. 
 
-[0] graph와 (x,y) 좌표의 방문 여부를 표시하는 visited (list)를 생성합니다. 
+graph에서 연결 요소(connected component)의 수를 찾고 연결 요소 안의 node 수를 카운트하는 문제입니다. deque로 BFS를 구현해서 해결했습니다.
 
-[1] graph 전체를 순회하면서 graph(x,y) 값이 1인 경우에 bfs 함수를 실행합니다. 
+[0] graph와 (x,y) 좌표의 방문 여부를 표시하는 visited (list)를 생성합니다.
+
+[1] graph 전체를 순회하면서 graph(x,y) 값이 1인 경우에 bfs 함수를 실행합니다.
+
 - [1-1] (x,y)를 push한 queue를 생성합니다.
 - [1-2] queue에서 원소를 pop 합니다.
-- [1-3] pop한 원소를 기준값으로 해서 상하좌우를 살핍니다. 
-만약 값이 1이고 아직 방문하지 않았다면 push 하고, 방문 표시합니다.
-*이 과정은 빈 queue가 될 때까지 반복합니다.   
+- [1-3] pop한 원소를 기준값으로 해서 상하좌우를 살핍니다.
+  만약 값이 1이고 아직 방문하지 않았다면 push 하고, 방문 표시합니다. \*이 과정은 빈 queue가 될 때까지 반복합니다.
 
 [2] bfs 함수가 실행된 횟수와 bfs 함수 내부에서 queue에 좌표를 push 할 때마다 count한 횟수를 출력합니다.
 
@@ -39,7 +42,7 @@ def bfs(root):
     while queue:
         #x,y pop
         x,y = queue.popleft()
-        #(x,y)를 기준으로 상,하,좌,우 확인 
+        #(x,y)를 기준으로 상,하,좌,우 확인
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -88,6 +91,6 @@ for x in range(n):
 result.sort()
 #총 apt 단지 수 출력
 print(len(result))
-#단지 내의 아파트 수 출력        
+#단지 내의 아파트 수 출력
 print(*result, sep='\n')
 ```

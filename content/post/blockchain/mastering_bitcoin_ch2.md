@@ -2,14 +2,14 @@
 title: "[blockchain] ch2. How bitcoin works"
 date: 2022-09-29T10:35:18+09:00
 draft: false
-tags: ["blockchain","bitcoin"]
-categories: ["blockchain"]
+tags: ["blockchain"]
+categories: ["Blockchain"]
 showToc: true
 UseHugoToc: true
 comments: true
 ---
 
-**Mastering Bitcoin: Programming the Open Blockchain 2nd Edition** 책을 정리한 내용입니다. 
+**Mastering Bitcoin: Programming the Open Blockchain 2nd Edition** 책을 정리한 내용입니다.
 
 ## 용어 정리
 
@@ -29,14 +29,14 @@ comments: true
 
 ### **Making Change**
 
-많은 비트코인 트랜잭션들은 새로운 소유자와 현재 소유자의 주소와 변경 주소 모두를 참조하는 output들을 포함할 것이다. 그 이유는 트랜잭션 input들은 통화 지폐와 같이 나눠질 수 없기 때문이다. 만약 주머니에서 가장 큰 지폐를 사용했다면 잔돈으로 가득찬다. 잔돈만 사용한다면 고액권만 갖게된다. 사람들은 무의식적으로 이 두 극단 사이의 균형을 찾고, 비트코인 지갑 개발자들은 이 균형을 프로그램하기 위해 노력한다. 
+많은 비트코인 트랜잭션들은 새로운 소유자와 현재 소유자의 주소와 변경 주소 모두를 참조하는 output들을 포함할 것이다. 그 이유는 트랜잭션 input들은 통화 지폐와 같이 나눠질 수 없기 때문이다. 만약 주머니에서 가장 큰 지폐를 사용했다면 잔돈으로 가득찬다. 잔돈만 사용한다면 고액권만 갖게된다. 사람들은 무의식적으로 이 두 극단 사이의 균형을 찾고, 비트코인 지갑 개발자들은 이 균형을 프로그램하기 위해 노력한다.
 
 transaction들은 transaction input에서 transaction output으로 값을 이동한다. input은 이전 transaction의 output의 참조로, 값이 어디서 왔는지 보여준다. 가치가 소유자에서 소유자로 이동될 때 chain of ownership을 만든다.
 
 ### **Common Transaction Forms**
 
 - 가장 일반적인 형태는 한 주소에서 다른 주소로의 지불
-    - 원래 소유자에게 반환된 '변경'을 포함한다. 이런 형식의 transaction은 하나의 input과 두개의 output을 가지고 있다.
+  - 원래 소유자에게 반환된 '변경'을 포함한다. 이런 형식의 transaction은 하나의 input과 두개의 output을 가지고 있다.
 - 여러 입력을 하나의 단일 output으로 통합
 - 하나의 input을 여러 수신자를 나타내는 다량의 ouput에 분배하는 거래
 
@@ -46,7 +46,7 @@ fully-node client로 운영되는 비트코인 지갑은 블록체인 상의 모
 
 ### **Adding the Transaction to the ledger-Transmitting the transaction**
 
-트랜잭션이 진행되는데 필요한 모든 정보를 가지고 있기 때문에 비트코인 네트워크에서 어떻게 그리고 어디서 전송되는지는 상관할 바가 아니다. 
+트랜잭션이 진행되는데 필요한 모든 정보를 가지고 있기 때문에 비트코인 네트워크에서 어떻게 그리고 어디서 전송되는지는 상관할 바가 아니다.
 
 비트코인 네트워크는 peer-to-peer 네트워크이다. 비트코인 네트워크의 목적은 거래와 블록을 모든 참가자들에게 전파하는 것이다.
 
@@ -60,10 +60,12 @@ Alice의 transaction은 비트코인 네트워크에서 전파되고 있다. min
 
 mining 과정은 비트코인에서 두가지 목적으로 사용된다.
 
-1) mining nodes가 비트코인의 'consensus rules(합의 규칙)'을 참조하여 모든 거래들을 검증한다. 
+1. mining nodes가 비트코인의 'consensus rules(합의 규칙)'을 참조하여 모든 거래들을 검증한다.
+
 - mining은 유효하지 않거나 잘못된 거래들을 거절함으로써 비트코인 거래들에 보안을 제공한다.
 
-2) 거의 중앙 은행이 새로운 돈을 발행하는 것과 같이 각 블록에 새로운 비트코인을 만든다. 
+2. 거의 중앙 은행이 새로운 돈을 발행하는 것과 같이 각 블록에 새로운 비트코인을 만든다.
+
 - 블록당 생성되는 비트코인의 양은 제한되어있으며, 정해진 발행 일정에 따라 시간이 지남에 따라 감소한다.
 
 mining은 비용과 보상 사이에서 좋은 균형을 이룬다. 성공적인 miner는 새로운 비트코인과 거래 수수료의 형태로 보상을 수집할 것이다. 그러나 보상은 miner가 합의 규칙을 만족시키기 위해 모든 거래를 올바르게 검증한 경우에만 수집될 것이다. 이 사소한 균형은 중앙의 권위없이 비트코인의 보안을 제공한다.

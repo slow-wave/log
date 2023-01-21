@@ -3,7 +3,7 @@ title: "[MySQL] 문법/함수 정리"
 date: 2022-10-21T01:43:36+09:00
 draft: false
 tags: ["DB","MySQL"]
-categories: ["mysql","leetcode","SQL"]
+categories: ["MySQL"]
 showToc: true
 UseHugoToc: true
 comments: true

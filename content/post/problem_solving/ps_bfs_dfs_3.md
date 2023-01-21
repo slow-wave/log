@@ -2,8 +2,8 @@
 title: "[programmers] DFS/BFS 4- 순위"
 date: 2022-09-06T14:23:31+09:00
 draft: false
-tags: ["programmers", "DFS", "python"]
-categories: ["problem_solving"]
+tags: ["백준", "graph", "python"]
+categories: ["Problem Solving"]
 showToc: true
 UseHugoToc: true
 comments: true

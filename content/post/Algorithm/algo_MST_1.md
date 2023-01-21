@@ -2,8 +2,8 @@
 title: "[algorithm] MST(Minimum Spanning Tree)"
 date: 2022-10-13T17:08:34+09:00
 draft: false
-tags: ["algorithm","MST","prim","Kruskal","graph"]
-categories: ["algorithm"]
+tags: ["MST", "prim", "Kruskal"]
+categories: ["Algorithm"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -13,32 +13,32 @@ comments: true
 
 {{< figure src="/images/algorithm/MST_1/0.png">}}
 
-Spanning Tree란 그래프 내의 모든 정점을 포함하는 트리입니다. 즉, 그래프에서 일부 간선을 선택해서 만든 트리입니다. 이때 그래프에 사이클이 형성이 되면 안됩니다. 연결 그래프에 대한 spanning tree는 여러개 일 수 있습니다. 
+Spanning Tree란 그래프 내의 모든 정점을 포함하는 트리입니다. 즉, 그래프에서 일부 간선을 선택해서 만든 트리입니다. 이때 그래프에 사이클이 형성이 되면 안됩니다. 연결 그래프에 대한 spanning tree는 여러개 일 수 있습니다.
 
-n개의 정점을 가지는 그래프의 최소 간선의 수는 (n-1)개이고, (n-1)개로 연결되어 있으면 필연적으로 트리 형태가 되고 이것이 spanning tree가 됩니다. 따라서 spanning tree는 그래프에 있는 n개의 정점을 (n-1)개의 간선으로 연결합니다. 
+n개의 정점을 가지는 그래프의 최소 간선의 수는 (n-1)개이고, (n-1)개로 연결되어 있으면 필연적으로 트리 형태가 되고 이것이 spanning tree가 됩니다. 따라서 spanning tree는 그래프에 있는 n개의 정점을 (n-1)개의 간선으로 연결합니다.
 
 ## 1. Minimum Spanning Tree (MST)
 
-MST는 트리를 구성하는 간선들의 가중치를 합한 것이 최소가 되는 신장 트리이며 다음의 조건을 충족해야합니다. 
+MST는 트리를 구성하는 간선들의 가중치를 합한 것이 최소가 되는 신장 트리이며 다음의 조건을 충족해야합니다.
 
 - 최소 비용의 간선으로 구성
 - 사이클을 포함하지 않음
 
-MST를 구하는 방법들은 greedy algorithm으로 구현이 되어 있습니다. 대표적인 것에는 Kruskal Algorithm과 Prim Algorithm이 있습니다. 
+MST를 구하는 방법들은 greedy algorithm으로 구현이 되어 있습니다. 대표적인 것에는 Kruskal Algorithm과 Prim Algorithm이 있습니다.
 
 ## 2-1. Kruskal MST Algorithm
 
 ### 0) 정의
 
-Kruskal은 **간선 선택**을 기반으로 하는 알고리즘입니다. 이전 단계에서 만들어진 신장 트리와는 상관없이 무조건 최소 간선만을 선택하는 방법입니다. 
+Kruskal은 **간선 선택**을 기반으로 하는 알고리즘입니다. 이전 단계에서 만들어진 신장 트리와는 상관없이 무조건 최소 간선만을 선택하는 방법입니다.
 
 ### 1) 과정
 
-[1] 그래프의 간선들을 가중치의 오름차순으로 정렬한다. 
+[1] 그래프의 간선들을 가중치의 오름차순으로 정렬한다.
 
-[2] 정렬된 간선 리스트에서 순서대로 사이클을 형성하지 않는 간선을 선택한다. 
+[2] 정렬된 간선 리스트에서 순서대로 사이클을 형성하지 않는 간선을 선택한다.
 
-[3] 해당 간선을 현재의 MST의 집합에 추가한다. 
+[3] 해당 간선을 현재의 MST의 집합에 추가한다.
 
 - 그림 설명
 
@@ -47,7 +47,7 @@ Kruskal은 **간선 선택**을 기반으로 하는 알고리즘입니다. 이�
 ### 2) code
 
 ```python
-#kruskal algorithm 
+#kruskal algorithm
 parent = dict() # 각 정점의 root node(부모)를 표현한 배열
 rank = dict()
 
@@ -71,7 +71,7 @@ def union(node1, node2):
             parent[root2] = root1
         else:
             parent[root1] = root2
-            if rank[root1] == rank[root2]: 
+            if rank[root1] == rank[root2]:
                 rank[root2] += 1
 
 def kruskal(graph):
@@ -80,7 +80,7 @@ def kruskal(graph):
     #초기화
     for node in graph['nodes']:
         make_set(node)
-        
+
     #1) 간선 weight 기반 sorting
     edges = graph['edges']
     edges.sort() #오름차순 정렬
@@ -94,16 +94,16 @@ def kruskal(graph):
             union(node1, node2)
             #3) 간선 추가
             minimum_spanning_tree.append(edge)
-	    
+
     return minimum_spanning_tree
 
 def solution():
-    graph = {'nodes': [1, 2, 3, 4], 
-             'edges': [(1,1,2),(1,1,3),(1,2,3),(1,3,4),(3,2,4)]} #(weight,node1,node2) 
-    
+    graph = {'nodes': [1, 2, 3, 4],
+             'edges': [(1,1,2),(1,1,3),(1,2,3),(1,3,4),(3,2,4)]} #(weight,node1,node2)
+
     return kruskal(graph)
 
-solution() 
+solution()
 # 결과 : [(1, 1, 2), (1, 1, 3), (1, 3, 4)]
 # 가중치의 합 : 3
 ```
@@ -112,15 +112,15 @@ solution()
 
 ### 0) 정의
 
-Prim은 **정점 선택**을 기반으로 하는 알고리즘입니다. 이전 단계에서 만들어진 신장 트리를 확장하는 방법입니다. 
+Prim은 **정점 선택**을 기반으로 하는 알고리즘입니다. 이전 단계에서 만들어진 신장 트리를 확장하는 방법입니다.
 
 ### 1) 과정
 
 [1] 시작 단계에서는 시작 정점만이 MST(최소 비용 신장 트리) 집합에 포함된다.
 
-[2] 앞 단계에서 만들어진 MST집합에 인접한 정점들 중에서 최소 간선으로(가장 낮은 가중치로) 연결된 정점을 선택하여 트리를 확장한다. 
+[2] 앞 단계에서 만들어진 MST집합에 인접한 정점들 중에서 최소 간선으로(가장 낮은 가중치로) 연결된 정점을 선택하여 트리를 확장한다.
 
-[3] (n-1)개의 간선을 가질 때까지 반복한다. 
+[3] (n-1)개의 간선을 가질 때까지 반복한다.
 
 ### 2) code
 
@@ -130,7 +130,7 @@ Prim은 **정점 선택**을 기반으로 하는 알고리즘입니다. 이전 �
 #prim algorithm
 
 from collections import defaultdict
-from heapq import * 
+from heapq import *
 
 def prim(first_node, graph):
     minimum_spanning_tree = []

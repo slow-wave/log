@@ -3,7 +3,7 @@ title: "[database] Re-introduction to DB"
 date: 2022-10-06T00:50:00+09:00
 draft: false
 tags: ["DB"]
-categories: ["database"]
+categories: ["DB"]
 showToc: true
 UseHugoToc: true
 comments: true

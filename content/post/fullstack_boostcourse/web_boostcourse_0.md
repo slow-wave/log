@@ -2,8 +2,8 @@
 title: "[boostcourse 웹프로그래밍 풀스택] 1-1. HTTP 프로토콜의 이해"
 date: 2022-09-06T14:41:22+09:00
 draft: false
-tags: ["web","HTTP","boostcourse 웹프로그래밍 풀스택"]
-categories: ["fullstack_boostcourse"]
+tags: ["web","HTTP"]
+categories: ["Fullstack"]
 showToc: true
 UseHugoToc: true
 comments: true

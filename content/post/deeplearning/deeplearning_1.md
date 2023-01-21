@@ -3,7 +3,7 @@ title: "[deeplearing] CNN"
 date: 2022-10-11T16:04:21+09:00
 draft: false
 tags: ["deeplearing"]
-categories: ["deeplearing"]
+categories: ["Deeplearing"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -14,18 +14,18 @@ comments: true
 - fully connected layer만으로 구성된 인공신경망의 입력데이터는 1차원(배열) 형태로 한정됨.
 - 한 장의 컬러 사진은 3차원 데이터임. (R,G,B)
 - 따라서 사진 데이터로 Fully Connected 신경망을 학습시켜야할 경우, 3차원을 1차원으로 평면화시켜야함.
-    - 평면화를 시키면 공간 정보 손실 발생 → 신경망이 특징을 추출 및 학습할 때 정확도 높이는데 한계
-    - 이미지의 공간 정보를 유지한 상태로 학습이 가능한 모델이 CNN임.
+  - 평면화를 시키면 공간 정보 손실 발생 → 신경망이 특징을 추출 및 학습할 때 정확도 높이는데 한계
+  - 이미지의 공간 정보를 유지한 상태로 학습이 가능한 모델이 CNN임.
 
 ## CNN(Convolution neural networks)이란?
 
 - 합성곱(convolution) 이라는 연산을 사용하는 신경망
 - 이미지 분류 작업에서 좋은 성능을 보여줌.
 - 시각 피질에 대한 실험에서 얻은 데이터에서 영감을 얻은 특별한 구조를 사용함.
-    - 사람의 시력은 여러 피질 단계로 이뤄져 있고, 각 피질 단계는 점점 더 구조화된 정보를 인식함.
-    - 단일 픽셀을 본 후 거기서부터 단순한 기하 형태를 인식하고 물체, 얼굴, 인체, 동물 등과 같이 복잡한 요소를 인식
+  - 사람의 시력은 여러 피질 단계로 이뤄져 있고, 각 피질 단계는 점점 더 구조화된 정보를 인식함.
+  - 단일 픽셀을 본 후 거기서부터 단순한 기하 형태를 인식하고 물체, 얼굴, 인체, 동물 등과 같이 복잡한 요소를 인식
 - CNN에서는 완전 연결신경망과 달리 뉴런을 kernel(filter)이라고 함.
-    - kernel은 입력 데이터와 합성곱 연산을 수행하게되는 행렬임.
+  - kernel은 입력 데이터와 합성곱 연산을 수행하게되는 행렬임.
 - convolution 계산을 통해 얻은 출력을 feature map이라고 함.
 - Convolution Layer는 Filter의 크기, Stride, padding 적용 여부, Max Pooling 크기에 따라서 출력 데이터의 Shape이 변경됨.
 
@@ -33,8 +33,8 @@ comments: true
 
 - 이미지의 특징을 추출하는 부분과 클래스를 분류하는 부분으로 나눌 수 있음.
 - Convolution Layer와 Pooling Layer를 여러 겹 쌓는 형태로 구성됨.
-    - Convolution Layer - 입력데이터에 필터를 적용 후 활성화 함수를 반영하는 필수 요소임.
-    - Pooling Layer - 선택 요소임.
+  - Convolution Layer - 입력데이터에 필터를 적용 후 활성화 함수를 반영하는 필수 요소임.
+  - Pooling Layer - 선택 요소임.
 - Fully Connected Layer
 - Flatten layer - 이미지의 특징을 추출하는 부분과 이미지를 분류하는 부분 사이에 이미지 형태의 데이터를 배열 형태로 만드는 레이어
 
@@ -47,7 +47,7 @@ comments: true
 - 이미지 픽셀 하나하나는 실수임. 컬러 사진은 천연색을 표현하기 위해, 각 픽셀을 RGB 3개의 실수로 표현한 3차원 데이터임.
 - Convolution Layer에 유입되는 입력데이터에는 한 개 이상의 필터가 적용됨.
 - 1개 필터는 Feature Map의 채널이 됨.
-    - convolution layer에 N개의 필터가 적용된다면 출력데이터는 N개의 채널을 갖게됨.
+  - convolution layer에 N개의 필터가 적용된다면 출력데이터는 N개의 채널을 갖게됨.
 
 ## Filter & Stride
 
@@ -69,15 +69,15 @@ comments: true
 - Convolution layer에서 Filter와 Stride의 작용으로 Feature Map의 크기는 입력데이터보다 작음.
 - 신경망에 Kernel을 적용하면 층이 깊어지면서 데이터의 차원이 줄어듦. → Convolution Layer의 출력 데이터가 줄어드는 것을 방지하는 방법이 padding임.
 - padding은 입력 데이터 주변을 특정값으로 채우는 것을 의미함.
-    - 보통 0으로 채워 넣음.
+  - 보통 0으로 채워 넣음.
 - 외각을 0 값으로 둘러싸는 특징으로부터 인공 신경망이 이미지의 외각을 인식하는 학습 효과도 있음.
 
 ### padding의 종류
 
 - same padding
-    - 입력과 feature map의 크기를 동일하게 만들기 위해 입력 주위에 0으로 패딩하는 것임.
+  - 입력과 feature map의 크기를 동일하게 만들기 위해 입력 주위에 0으로 패딩하는 것임.
 - valid padding
-    - padding 없이 순수한 입력 배열에서만 합성곱을 하여 특성맵을 만드는 경우임. → feature map의 크기가 줄어듦.
+  - padding 없이 순수한 입력 배열에서만 합성곱을 하여 특성맵을 만드는 경우임. → feature map의 크기가 줄어듦.
 
 ## Pooling Layer
 

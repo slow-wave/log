@@ -2,8 +2,8 @@
 title: "[Leetcode] Linked List 1 - 21. Merge Two Sorted Lists"
 date: 2022-09-13T00:15:16+09:00
 draft: false
-tags: ["leetcode", "linkedlist", "python"]
-categories: ["problem_solving"]
+tags: ["leetcode", "linked-list", "python"]
+categories: ["Problem Solving"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -13,11 +13,11 @@ comments: true
 
 [문제 링크](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-이 문제는 제목 그대로 2개의 리스트를 정렬해서 결합하는 문제입니다. 구현되어있는 ListNode class를 이용해서 mergeTwoLists method를 완성하면 됩니다. 
+이 문제는 제목 그대로 2개의 리스트를 정렬해서 결합하는 문제입니다. 구현되어있는 ListNode class를 이용해서 mergeTwoLists method를 완성하면 됩니다.
 
 ## 풀이 과정
 
-다음의 조건을 갖고 있다고 가정하고 실행 과정을 정리해보겠습니다. 
+다음의 조건을 갖고 있다고 가정하고 실행 과정을 정리해보겠습니다.
 
 ```python
 # Definition for singly-linked list.
@@ -31,6 +31,7 @@ b = [1,3,4]
 
 dummy = cur = ListNode(0)
 ```
+
 {{< figure src="/images/problem_solving/ps_linkedlist_1/1.png">}}
 {{< figure src="/images/problem_solving/ps_linkedlist_1/2.png">}}
 {{< figure src="/images/problem_solving/ps_linkedlist_1/3.png">}}
