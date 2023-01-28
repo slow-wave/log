@@ -13,7 +13,7 @@ comments: true
 
 Data Structure는 데이터를 저장하고 구성하는데 사용하는 저장소입니다. 데이터에 효율적으로 접근하고 업데이트 할 수 있도록 컴퓨터에 데이터를 정렬하는 방법입니다.
 
-{{< figure src="/images/data_structure/data_structure_0/0.png">}}
+{{< figure src="/images/data_structure/ds_intro/0.png">}}
 
 Classification of Data Structure ([출처](https://www.geeksforgeeks.org/data-structures/))
 
@@ -57,7 +57,7 @@ graph는 Nodes/Vertices(정점)와 Edges(간선)로 구성된 비선형 데이�
   - V x V 크기의 2D 배열임.
   - 공간을 많이 차지한다는 단점이 있음. O(V^2)
   - 예시 그림
-    {{< figure src="/images/data_structure/data_structure_0/8.png">}}
+    {{< figure src="/images/data_structure/ds_intro/8.png">}}
 
   - code
     ```python
@@ -76,7 +76,7 @@ graph는 Nodes/Vertices(정점)와 Edges(간선)로 구성된 비선형 데이�
 
   - 배열이 사용되며, 배열의 크기는 node의 수와 같음.
   - 예시 그림
-    {{< figure src="/images/data_structure/data_structure_0/9.png">}}
+    {{< figure src="/images/data_structure/ds_intro/9.png">}}
   - code
 
     ```python
@@ -138,37 +138,37 @@ graph는 Nodes/Vertices(정점)와 Edges(간선)로 구성된 비선형 데이�
 
 ### 3) graph의 종류
 
-{{< figure src="/images/data_structure/data_structure_0/1.png">}}
+{{< figure src="/images/data_structure/ds_intro/1.png">}}
 
 - Null Graph : edge가 없는 경우
 - Trivial Graph : 1개의 vertex만 있고 edge가 없는 경우
 
-{{< figure src="/images/data_structure/data_structure_0/2.png">}}
+{{< figure src="/images/data_structure/ds_intro/2.png">}}
 
 - Undirected Graph : 무방향 그래프
 - Directed Graph : 방향 그래프
 
-{{< figure src="/images/data_structure/data_structure_0/3.png">}}
+{{< figure src="/images/data_structure/ds_intro/3.png">}}
 
 - Connected Graph : 모든 node가 연결되어 있음.
 - Disconnected Graph : 1개의 node라도 끊어진 부분이 있음.
 
-{{< figure src="/images/data_structure/data_structure_0/4.png">}}
+{{< figure src="/images/data_structure/ds_intro/4.png">}}
 
 - Regular Graph : 모든 노드의 degree가 그래프의 다른 노드와 동일한 그래프
 - Complete Graph : 각 노드끼리 연결이 되어있는 그래프
 
-{{< figure src="/images/data_structure/data_structure_0/5.png">}}
+{{< figure src="/images/data_structure/ds_intro/5.png">}}
 
 - Cycle Graph : 각 vertex의 degree가 2인 경우임. 그래프 전체가 순환됨.
 - Cyclic Graph : 1개의 cycle이라도 존재하는 경우를 뜻함.
 
-{{< figure src="/images/data_structure/data_structure_0/6.png">}}
+{{< figure src="/images/data_structure/ds_intro/6.png">}}
 
 - Directed Acyclic Graph : cycle이 없는 방향 그래프
 - Bipartite Graph : 각 집합의 꼭짓점에 두 집합 사이의 간선이 포함되지 않도록 꼭짓점을 두 집합으로 나눌 수 있는 그래프
 
-{{< figure src="/images/data_structure/data_structure_0/7.png">}}
+{{< figure src="/images/data_structure/ds_intro/7.png">}}
 
 - Weighted Graph : 가중치가 존재하는 그래프. 무방향/방향 가중치 그래프가 존재함.
   - 방향을 가진 그래프를 network라고 함.
@@ -208,7 +208,7 @@ graph는 Nodes/Vertices(정점)와 Edges(간선)로 구성된 비선형 데이�
 
 ## 1) 트리 탐색 방법
 
-{{< figure src="/images/data_structure/data_structure_0/10.png">}}
+{{< figure src="/images/data_structure/ds_intro/10.png">}}
 
 - in-order : D → B → A → E → C → F → G
 - pre-order : A → B → D → C → E → F → G
