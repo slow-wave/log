@@ -29,7 +29,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 - var의 문제점
   - 함수를 제외한 다른 코드 블록에서는 개별적인 스코프를 가질 수 없다는 문제점 있음.
   - 재선언 허용
-  → ES6에서 let, const 추가
+    → ES6에서 let, const 추가
 
 ### let, const
 
@@ -52,6 +52,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
     - Camel Case 방식 (whoAmI)
     - Snake Case 방식(who_am_i)
 - code
+
   ```jsx
   let hi;
   hi = "hello";
@@ -67,6 +68,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 - 종류
   - string, number, bigint, boolean, undefined, null, symbol
 - code
+
   ```jsx
   //number
   const number = 123;
@@ -98,8 +100,10 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
     console.log(arr);
     ```
 - Object
+
   - 객체는 변수나 값 외에도 함수를 property로 가질 수 있음.
   - code
+
     ```jsx
     //Object
     const obj = {
@@ -165,9 +169,12 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 - 증감 연산자
   - ++, --
 - 비교 연산자
-  - > , <, ===, !==
+
+  - <, >, ===, !==
   - == vs. ===
+
     - code
+
       ```jsx
       //비교 연산자
       const a = 123;
@@ -176,8 +183,11 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
       console.log(a == b); //true (추상 비교)
       console.log(a === b); //fasle (엄격 비교)
       ```
+
 - 논리 연산자
+
   - code
+
     ```jsx
     //논리 연산자
     const a = true;
@@ -187,6 +197,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
     console.log(a || b); //true
     console.log(!a); //false
     ```
+
 - 삼항 연산자
   - code
     ```jsx
@@ -196,8 +207,10 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
     console.log(toc ? "open" : "close");
     ```
 - nullish 연산자
+
   - 여러 개의 피연산자 중 값이 확정되어 있는 변수를 찾음.
   - code
+
     ```jsx
     //nullish
     const a = undefined;
@@ -206,6 +219,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 
     console.log(a ?? b ?? c); //hi
     ```
+
 - 비트 연산자
   - &, |, ~, ^, <<, >>
 - 대입 연산자
@@ -216,8 +230,10 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
     number += 2;
     ```
 - 전개 연산자(spread syntax)
+
   - 반복이 가능한 객체에 적용할 수 있는 문법의 한 종류다.
   - code
+
     ```jsx
     //전개 연산자
     const numbers = [1, 2, 3, 4, 5];
@@ -232,6 +248,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 ### if
 
 - code
+
   ```jsx
   const budget = 4000;
   const price = 3000;
@@ -258,6 +275,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 ### switch
 
 - code
+
   ```jsx
   //switch
   const number = 10;
@@ -277,6 +295,7 @@ javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한
 ### for / for of
 
 - code
+
   ```jsx
   //for
   for (let i = 0; i <= 10; i++) {
@@ -319,6 +338,7 @@ do {
 - 함수 내부에서 선언된 변수를 지역 변수(local variable)라고 함.
   - 변수를 사용할 수 있는 범위(scope)를 block안으로 제한
 - code
+
   ```jsx
   //(1)인자에 기본값 설정 X
   function sum(a, b) {
@@ -454,6 +474,7 @@ Math.sqrt(100); //10
   - start: 시작인덱스
   - end: 끝 인덱스
 - code
+
   ```jsx
   //(0)문자열 비교
   "a".codePointAt(0); //97
@@ -503,7 +524,9 @@ Math.sqrt(100); //10
 ## 9) 배열 메소드
 
 - arr.push(), arr.pop()
+
   - code
+
     ```jsx
     //arr.push(), arr.pop()
     const arr = [1, 2, 3, 4, 5];
@@ -514,9 +537,12 @@ Math.sqrt(100); //10
 
     console.log(arr); //[0, 1, 2, 3, 4, 5, 6, 7]
     ```
+
 - arr.forEach()
+
   - 반환값 없음.
   - code
+
     ```jsx
     //foreach 1
     function print(number, index) {
@@ -530,9 +556,12 @@ Math.sqrt(100); //10
       console.log(`${index} 위치의 요소 : ${number}`);
     });
     ```
+
 - arr.map()
+
   - 함수를 받아 특정 기능을 시행하고 새로운 배열을 반환함.
   - code
+
     ```jsx
     //map1
     const arr = [1, 2, 3, 4, 5];
@@ -555,8 +584,11 @@ Math.sqrt(100); //10
     console.log(newUserList);
     //output > [{name: 'a', age: 10, id: 1, isAdult: false},{name: 'b', age: 15, id: 2, isAdult: false},{name: 'c', age: 30, id: 3, isAdult: true}]
     ```
+
 - arr.includes()/arr.find()/arr.findIndex()
+
   - code
+
     ```jsx
     //arr.includes()
     const arr = ["hello", "world"];
@@ -569,8 +601,11 @@ Math.sqrt(100); //10
     //arr.findIndex()
     console.log(arr1.findIndex((number) => number > 3)); //3 (첫번째 요소의 인덱스 리턴)
     ```
+
 - arr.slice()/arr.splice()
+
   - code
+
     ```jsx
     //arr.slice()
     const arr = [1, 2, 3, 4, 5];
@@ -582,8 +617,11 @@ Math.sqrt(100); //10
     arr.splice(2, 1, 100);
     console.log(arr); //[1,2,100,4]
     ```
+
 - arr.join()/arr.concat()
+
   - code
+
     ```jsx
     const hi = ["hi", "slow"];
     const greeting = ["nice to meet u"];
@@ -593,9 +631,12 @@ Math.sqrt(100); //10
     //arr.concat()
     console.log(hi.concat(greeting)); //['hi', 'slow', 'nice to meet u']
     ```
+
 - arr.filter()
+
   - 만족하는 모든 요소를 배열로 반환
   - code
+
     ```jsx
     //filter
     let userList = [
@@ -611,6 +652,7 @@ Math.sqrt(100); //10
 
     console.log(result); //[{name:'a', age:10},{name:'b', age:15}]
     ```
+
 - arr.reduce(callback, [,initialValue])
   - 배열의 각 요소에 대해서 주어진 reducer 함수 실행 후 하나의 값을 반환
   - 필수 인자인 누산기(acc), 현재 값(cur)을 가짐.
@@ -653,6 +695,7 @@ Math.sqrt(100); //10
 ### 배열 구조분해
 
 - code
+
   ```jsx
   //배열 구조분해
   const arr = [1, 2, 3, 4, 5];
@@ -664,6 +707,7 @@ Math.sqrt(100); //10
 ### 객체 구조분해
 
 - code
+
   ```jsx
   //객체 구조분해1
   const obj = {
@@ -693,6 +737,7 @@ Math.sqrt(100); //10
   } = ex;
   console.log(three);
   ```
+
 - 함수 구조분해
   - code
     ```jsx
@@ -714,7 +759,9 @@ Math.sqrt(100); //10
     console.log(sum(obj));
     ```
 - 구조분해 할당 응용
+
   - code
+
     ```jsx
     //(1)구조분해 할당 - 변수 간 값 바꾸기
     let a = 123;
@@ -788,7 +835,9 @@ const user = {
   </html>
   ```
 - 요소 선택
+
   - code
+
     ```jsx
     //요소 선택1
     //id로 찾기
@@ -803,7 +852,9 @@ const user = {
     const title_tag = document.getElementsByTagName("h2");
     console.log(title_tag);
     ```
+
   - code
+
     ```jsx
     //요소 선택2
     //querySelector
@@ -818,6 +869,7 @@ const user = {
     const title_classes = document.querySelectorAll(".title_class");
     console.log(title_classes);
     ```
+
 - 요소 변경
   - 선택한 요소들이 innerText를 사용할 수 있는 이유는 HTML element라는 객체가 갖고 있는 하나의 property이고, HTML 모든 요소들이 HTML element라는 객체를 상속받고 있기 때문이다.
   - [HTMLElement docs](https://developer.mozilla.org/ko/docs/Web/API/HTMLElement)
@@ -829,7 +881,9 @@ const user = {
     title.style.color = "blue";
     ```
 - 요소 생성
+
   - code
+
     ```jsx
     //요소 생성
     const text = document.createElement("p");
@@ -844,6 +898,7 @@ const user = {
 ## 14) 이벤트
 
 - code (click event 등록 & 삭제)
+
   ```jsx
   const button = document.querySelector("button");
   const removeButton = document.querySelector(".remove");
@@ -865,27 +920,35 @@ const user = {
 
 - 코드를 모아둔 파일이다. 재사용성이나 유지보수성을 위해 사용된다.
 - 모듈 생성법
+
   - Named Exports
+
     - 하나의 모듈에서 여러 개의 함수나 객채, 변수 등을 내보낼 수있음.
     - code (index.js)
+
       ```jsx
       import { greeting } from "./hello.js";
 
       greeting();
       ```
+
     - code(hello.js)
       ```jsx
       export function greeting() {
         console.log("hello");
       }
       ```
+
   - Default Exports
+
     - code (index.js)
+
       ```jsx
       import greeting from "./hello.js";
 
       greeting();
       ```
+
     - code(hello.js)
       ```jsx
       export default function greeting() {
@@ -897,6 +960,7 @@ const user = {
 
 - 기존의 자바스크립트에서는 프로토타입 지원함. ES6에서부터 클래스 문법 제공
 - code
+
   ```java
   //class
   class User {
