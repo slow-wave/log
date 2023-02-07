@@ -3,7 +3,7 @@ title: "[토비의 스프링 3.1] 4장 정리"
 date: 2023-01-08T02:31:22+09:00
 draft: false
 tags: ["Spring", "Backend", "Java"]
-categories: ["Spring"]
+categories: ["(book)토비의 스프링3.1"]
 showToc: true
 UseHugoToc: true
 comments: true
@@ -26,8 +26,8 @@ comments: true
     - 시스템 레벨에서 특별한 작업을 하는게 아니라면 애플리케이션에서는 신경 쓰지 않아도 됨.
   - 2. Exception과 체크 예외
     - 체크 예외 - Exception 클래스의 서브클래스이면서 RuntimeException 클래스를 상속하지 않은 것.
-        - 일반적으로 예외라고 하면 체크 예외라고 생각해도 됨.
-        - 체크 예외가 발생할 수 있는 메소드를 사용할 경우 반드시 예외 처리 코드 작성해야함.
+      - 일반적으로 예외라고 하면 체크 예외라고 생각해도 됨.
+      - 체크 예외가 발생할 수 있는 메소드를 사용할 경우 반드시 예외 처리 코드 작성해야함.
     - 언체크 예외(unchecked exception) - RuntimeException을 상속한 클래스들
   - 3. RuntimeException과 언체크/런타임 예외
     - 런타임 예외는 주로 프로그램의 오류가 있을 때 발생하도록 의도된 것임.

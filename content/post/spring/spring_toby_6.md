@@ -3,7 +3,7 @@ title: "[토비의 스프링 3.1] 5장 정리 - 2"
 date: 2023-01-29T01:50:17+09:00
 draft: false
 tags: ["Spring", "Backend", "Java"]
-categories: ["Spring"]
+categories: ["(book)토비의 스프링3.1"]
 showToc: true
 UseHugoToc: true
 comments: true

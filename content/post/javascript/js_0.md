@@ -11,7 +11,7 @@ comments: true
 
 ## 0) Intro
 
-javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한 글입니다. 두 강의 모두 자바스크립트 문법을 공부하는데 많은 도움이 되어 추천하고 싶습니다.
+javascript 문법 공부를 위해 Inflearn에 있는 강의를 듣고 정리한 글입니다. 두 강의 모두 자바스크립트 문법을 공부하는데 많은 도움이 되어 추천하고 싶습니다. 코드 예제의 경우 공부를 위해서 변형한 부분이 있습니다.
 
 - [이룸코딩님의 **자바스크립트 ES6+ 기초 핵심 문법**](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-es6-%EA%B8%B0%EC%B4%88%ED%95%B5%EC%8B%AC/community?type=question)
 - [코딩앙마님의 자바스크립트 중급 강좌](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A4%91%EA%B8%89/dashboard)
