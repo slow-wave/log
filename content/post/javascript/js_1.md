@@ -1,5 +1,5 @@
 ---
-title: "[javascript] 모던 자바스크립트 Deep Dive 10장"
+title: "[javascript] 모던 자바스크립트 Deep Dive , 객체 리터럴"
 date: 2023-02-07T14:46:04+09:00
 draft: false
 tags: ["Javascript"]
