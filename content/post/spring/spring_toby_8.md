@@ -1,5 +1,5 @@
 ---
-title: "[토비의 스프링 3.1] 6장 정리"
+title: "[토비의 스프링 3.1] 7장 정리"
 date: 2023-03-05T03:12:21+09:00
 draft: false
 tags: ["Spring", "Backend", "Java"]
